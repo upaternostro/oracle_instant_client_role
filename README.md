@@ -6,7 +6,7 @@
 
 
 
-This ansible role installs [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) in a Debian environment. It has been tested for Debian buster, stretch and jessie.
+This ansible role installs [Oracle Instant Client](https://www.oracle.com/database/technologies/instant-client.html) in a Debian environment. It has been tested for Debian buster and stretch.
 
 - [Getting Started](#getting-started)
 	- [Prerequisities](#prerequisities)
