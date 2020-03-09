@@ -1,0 +1,18 @@
+---
+
+- name: ORACLE_INSTANT_CLIENT | Ensure skeleton installation paths
+  file:
+    dest: "{{ instant_client_extract_path }}"
+    state: directory
+
+- name: ORACLE_INSTANT_CLIENT | Check instant client version
+  command: sqlplus -V
+  register: instant_client_check
+  changed_when: false
+  ignore_errors: true
+
+- name: ORACLE_INSTANT_CLIENT | Install
+  include: install.yml
+  tags:
+    - oracle_instant_client_install
+  when: instant_client_force_reinstall or instant_client_check is failed or instant_client_version not in instant_client_check.stderr

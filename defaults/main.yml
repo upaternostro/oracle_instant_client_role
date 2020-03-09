@@ -1,0 +1,27 @@
+## Instant Client installation
+# About oracle release numbers (https://docs.oracle.com/en/database/oracle/oracle-database/12.2/upgrd/about-oracle-database-release-numbers.html#GUID-1E2F3945-C0EE-4EB2-A933-8D1862D8ECE2)
+
+instant_client_version: 19.6.0.0.0
+instant_client_release_system: linux.x64
+
+instant_client_basic_release_name: instantclient-basic-{{ instant_client_release_system }}-{{ instant_client_version }}dbru
+instant_client_basic_package: "{{ instant_client_basic_release_name }}.zip"
+instant_client_basic_url: "https://download.oracle.com/otn_software/linux/instantclient/{{ instant_client_version[:-1] | replace('.' , '') }}/{{ instant_client_basic_package }}"
+
+instant_client_sqlplus_release_name: instantclient-sqlplus-{{ instant_client_release_system }}-{{ instant_client_version }}dbru
+instant_client_sqlplus_package: "{{ instant_client_sqlplus_release_name }}.zip"
+instant_client_sqlplus_url: "https://download.oracle.com/otn_software/linux/instantclient/{{ instant_client_version[:-1] | replace('.' , '') }}/{{ instant_client_sqlplus_package }}"
+
+instant_client_download_path: /usr/src
+instant_client_basic_package_path: "{{ instant_client_download_path }}/{{ instant_client_basic_package }}"
+instant_client_sqlplus_package_path: "{{ instant_client_download_path }}/{{ instant_client_sqlplus_package }}"
+
+instant_client_extract_path: /opt/oracle
+instant_client_root_path: "{{ instant_client_extract_path }}/instantclient"
+
+instant_client_force_reinstall: false
+
+instant_client_needed_packages:
+  - unzip
+  - libaio1 
+  - libaio-dev
