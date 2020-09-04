@@ -3,10 +3,15 @@
 
 instant_client_version: 19.6.0.0.0
 instant_client_release_system: linux.x64
+instant_client_devel_install: false
 
 instant_client_basic_release_name: instantclient-basic-{{ instant_client_release_system }}-{{ instant_client_version }}dbru
 instant_client_basic_package: "{{ instant_client_basic_release_name }}.zip"
 instant_client_basic_url: "https://download.oracle.com/otn_software/linux/instantclient/{{ instant_client_version[:-1] | replace('.' , '') }}/{{ instant_client_basic_package }}"
+
+instant_client_devel_release_name: instantclient-sdk-{{ instant_client_release_system }}-{{ instant_client_version }}dbru
+instant_client_devel_package: "{{ instant_client_devel_release_name }}.zip"
+instant_client_devel_url: "https://download.oracle.com/otn_software/linux/instantclient/{{ instant_client_version[:-1] | replace('.' , '') }}/{{ instant_client_devel_package }}"
 
 instant_client_sqlplus_release_name: instantclient-sqlplus-{{ instant_client_release_system }}-{{ instant_client_version }}dbru
 instant_client_sqlplus_package: "{{ instant_client_sqlplus_release_name }}.zip"
@@ -14,6 +19,7 @@ instant_client_sqlplus_url: "https://download.oracle.com/otn_software/linux/inst
 
 instant_client_download_path: /usr/src
 instant_client_basic_package_path: "{{ instant_client_download_path }}/{{ instant_client_basic_package }}"
+instant_client_devel_package_path: "{{ instant_client_download_path }}/{{ instant_client_devel_package }}"
 instant_client_sqlplus_package_path: "{{ instant_client_download_path }}/{{ instant_client_sqlplus_package }}"
 
 instant_client_extract_path: /opt/oracle
