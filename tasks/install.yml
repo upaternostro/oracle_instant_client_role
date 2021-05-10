@@ -14,7 +14,7 @@
   get_url:
     url: "{{ instant_client_devel_url }}"
     dest: "{{ instant_client_devel_package_path }}"
-  when: instant_client_devel_install == True
+  when: instant_client_devel_install
 
 - name: ORACLE_INSTANT_CLIENT | Download sqlplus package
   get_url:
@@ -32,7 +32,7 @@
     src: "{{ instant_client_devel_package_path }}"
     dest: "{{ instant_client_extract_path }}"
     remote_src: True
-  when: instant_client_devel_install == True
+  when: instant_client_devel_install
 
 - name: ORACLE_INSTANT_CLIENT | Extract sqlplus package into installation folder
   unarchive:
@@ -48,7 +48,7 @@
 
 - name: ORACLE_INSTANT_CLIENT | Copy libraries path file
   template:
-    src: instant-client-libs.conf.j2 
+    src: instant-client-libs.conf.j2
     dest: /etc/ld.so.conf.d/instant-client-libs.conf
     mode: 0644
   notify: update libraries

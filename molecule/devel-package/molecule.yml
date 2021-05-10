@@ -28,6 +28,6 @@ provisioner:
   lint:
     name: ansible-lint
 scenario:
-  name: default
+  name: devel-package
 verifier:
   name: ansible

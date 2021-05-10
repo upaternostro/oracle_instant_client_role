@@ -1,0 +1,5 @@
+---
+- name: Converge
+  hosts: oracle_instant_client_group
+  roles:
+    - role: oracle_instant_client_role

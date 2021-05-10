@@ -1,7 +1,7 @@
 # Oracle Instant Client Ansible role
 ![Logo](https://raw.githubusercontent.com/idealista/oracle_instant_client_role/master/logo.gif)
 
-[![Build Status](https://travis-ci.org/idealista/oracle_instant_client_role.png)](https://travis-ci.org/idealista/oracle_instant_client_role)
+[![Build Status](https://travis-ci.com/idealista/oracle_instant_client_role.png)](https://travis-ci.com/idealista/oracle_instant_client_role)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-idealista.oracle_instant_client_role-B62682.svg)](https://galaxy.ansible.com/idealista/oracle_instant_client_role)
 
 
@@ -24,9 +24,9 @@ These instructions will get you a copy of the role for your Ansible playbook. On
 
 ### Prerequisities
 
-Ansible 2.8.x.x version installed.
+Ansible 2.9.9 version installed.
 
-Molecule 2.22.x version installed.
+Molecule 3.x.x version installed.
 
 For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and  [Goss] (https://github.com/aelsabbahy/goss) as verifier.
 
@@ -36,7 +36,7 @@ Create or add to your roles dependency file (e.g requirements.yml):
 
 ```
 - src: idealista.oracle_instant_client_role
-  version: 1.0.0
+  version: 1.2.0
   name: oracle_instant_client
 ```
 
@@ -82,9 +82,9 @@ $ pipenv run molecule test
 
 ## Built With
 
-![Ansible](https://img.shields.io/badge/ansible-2.8.6.0-green.svg)
-![Molecule](https://img.shields.io/badge/molecule-2.22.0-green.svg)
-![Goss](https://img.shields.io/badge/goss-0.3.9-green.svg)
+![Ansible](https://img.shields.io/badge/ansible-2.9.9-green.svg)
+![Molecule](https://img.shields.io/badge/molecule-3.0.4-green.svg)
+![Goss](https://img.shields.io/badge/goss-0.3.16-green.svg)
 
 ## Versioning
 
