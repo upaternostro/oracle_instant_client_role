@@ -24,7 +24,7 @@ These instructions will get you a copy of the role for your Ansible playbook. On
 
 ### Prerequisities
 
-Ansible 2.9.9 version installed.
+Ansible 2.9.21 version installed.
 
 Molecule 3.x.x version installed.
 
@@ -82,7 +82,7 @@ $ pipenv run molecule test
 
 ## Built With
 
-![Ansible](https://img.shields.io/badge/ansible-2.9.9-green.svg)
+![Ansible](https://img.shields.io/badge/ansible-2.9.21-green.svg)
 ![Molecule](https://img.shields.io/badge/molecule-3.0.4-green.svg)
 ![Goss](https://img.shields.io/badge/goss-0.3.16-green.svg)
 
