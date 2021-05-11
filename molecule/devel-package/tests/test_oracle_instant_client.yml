@@ -1,0 +1,11 @@
+---
+file:
+  {{ instant_client_root_path }}:
+    exists: true
+    filetype: symlink
+
+command:
+  version:
+    exit-status: 0
+    exec: "sqlplus -V" 
+    
