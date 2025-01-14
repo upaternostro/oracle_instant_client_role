@@ -1,6 +1,6 @@
 ---
 
 - name: ORACLE_INSTANT_CLIENT | Check installation
-  include: check.yml
+  include_tasks: check.yml
   tags:
     - oracle_instant_client_check
