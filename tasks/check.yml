@@ -12,7 +12,7 @@
   ignore_errors: true
 
 - name: ORACLE_INSTANT_CLIENT | Install
-  include: install.yml
+  include_tasks: install.yml
   tags:
     - oracle_instant_client_install
   when: instant_client_force_reinstall or instant_client_check is failed or instant_client_version not in instant_client_check.stdout
