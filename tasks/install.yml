@@ -42,7 +42,7 @@
 
 - name: ORACLE_INSTANT_CLIENT | Simbolic link to installation folder
   file:
-   src: "{{ instant_client_root_path }}_{{ instant_client_version[0:2] }}_{{ instant_client_version[3] }}"
+   src: "{{ instant_client_root_path }}_{{ instant_client_version.split('.')[0] }}_{{ instant_client_version.split('.')[1] }}"
    dest: "{{ instant_client_root_path }}"
    state: link
 
